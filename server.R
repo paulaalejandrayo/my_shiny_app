@@ -4,7 +4,7 @@ library(dplyr)
 
 colours<-c("green", "blue", "red", "pink", "aquamarine3", "antiquewhite4", "black", "deeppink", "darkmagenta", "darkorange", "cyan", "darkslateblue", "darkolivegreen1", "darkred", "blue4", "coral")
 
-datax<-read.table(file="data16/results_amplitude_16.dat", header = TRUE)
+datax<-read.table(file="results_amplitude_16.dat", header = TRUE)
 normalisation<-(9.8*4./3.*3.1416*2500*0.0005^3*0.001)
 datax$Keff_per_unit.Joules.<-datax$Keff_per_unit.Joules./normalisation
 datax<-datax[datax$realisation==1,]
